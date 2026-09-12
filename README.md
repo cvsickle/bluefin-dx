@@ -1,6 +1,10 @@
-# Bluefin DX &nbsp; [![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml)
+# Bluefin DX
 
-This repository is a custom [bootc](https://github.com/bootc-dev/bootc) image, built on [Bluefin-DX](https://github.com/ublue-os/bluefin).
+[![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml) &nbsp; [![Dependabot Updates](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates) &nbsp; [![renovate](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml)
+
+---
+
+This repository is a custom [bootc](https://github.com/bootc-dev/bootc) image built on [Bluefin-DX](https://github.com/ublue-os/bluefin).
 
 It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
@@ -101,3 +105,9 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/cvsickle/bluefin-dx
 ```
+
+## Repository Mirrors
+
+- GitHub - [https://github.com/cvsickle/bluefin-dx](https://github.com/cvsickle/bluefin-dx)
+- Codeberg - [https://codeberg.org/cvsickle/bluefin-dx](https://codeberg.org/cvsickle/bluefin-dx)
+- Forgejo (Mirror) - [https://git.cvsickle.com/cvsickle/bluefin-dx](https://git.cvsickle.com/cvsickle/bluefin-dx)
