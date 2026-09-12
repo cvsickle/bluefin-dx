@@ -1,0 +1,15 @@
+[Unit]
+Description=Install default Brew packages
+After=brew-setup.service network-online.target
+Wants=network-online.target
+ConditionPathExists=!/etc/.brew-default-packages
+
+[Service]
+Type=oneshot
+User=1000
+Group=1000
+ExecStart=/usr/bin/brew-default-packages.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

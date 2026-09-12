@@ -1,5 +1,9 @@
 modules:
   - type: brew
-  - type: script
-    scripts:
-      - install-brew-packages.sh
+    nofile-limits: true
+    brew-analytics: false
+
+  - type: systemd
+    system:
+      enabled:
+        - brew-default-packages.service
