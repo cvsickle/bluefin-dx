@@ -1,6 +1,6 @@
 # Bluefin DX
 
-[![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml) &nbsp; [![Dependabot Updates](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates) &nbsp; [![renovate](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml)
+[![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml) &nbsp; [![Dependabot Updates](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/dependabot/dependabot-updates) &nbsp; [![renovate](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/renovate.yml) &nbsp; [![Repo sync (GitHub -> Codeberg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/sync_codeberg.yaml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/sync_codeberg.yaml)
 
 ---
 
