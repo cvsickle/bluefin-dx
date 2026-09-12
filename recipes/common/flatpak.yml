@@ -1,3 +1,6 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
 modules:
   - type: default-flatpaks
     configurations:
@@ -5,8 +8,8 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - com.github.wwmm.easyeffects     # Audio effects and EQ
-          - it.mijorus.gearlever            # Manage AppImages
-          - net.codelogistics.webapps       # Manage Web Apps
+          - com.github.wwmm.easyeffects # Audio effects and EQ
+          - it.mijorus.gearlever # Manage AppImages
+          - net.codelogistics.webapps # Manage Web Apps
           - io.github.mhogomchungu.sirikali # GUI for managing encrypted volumes
       - scope: user # Also add Flathub user repo, but no user packages
