@@ -20,5 +20,8 @@ modules:
   # Install gnome extensions.
   - from-file: common/gnome.yml
 
+  # Update the os-release.
+  - from-file: common/os-release.yml
+
   # Add signing configuration.
   - type: signing

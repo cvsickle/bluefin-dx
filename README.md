@@ -36,8 +36,8 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 ### GNOME extensions added
 
-- Alphabetical App Grid
-- O-tiling
+- [Alphabetical App Grid](https://extensions.gnome.org/extension/4269/alphabetical-app-grid/)
+- [O-tiling](https://extensions.gnome.org/extension/9875/o-tiling/)
 
 ### GNOME extensions removed
 
