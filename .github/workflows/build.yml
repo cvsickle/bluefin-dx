@@ -9,6 +9,7 @@ on:
     paths-ignore:
       - "**.md"
       - ".devcontainer/**"
+      - ".github/workflows/renovate.yaml"
       - ".github/workflows/sync_codeberg.yaml"
   workflow_dispatch: # allow manually triggering builds
 
@@ -30,6 +31,7 @@ jobs:
       matrix:
         recipe:
           - recipe-nvidia.yml
+          - recipe-base.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
