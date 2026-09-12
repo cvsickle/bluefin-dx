@@ -1,38 +1,98 @@
-# bluefin-dx &nbsp; [![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml)
+# Bluefin DX &nbsp; [![bluebuild build badge](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml/badge.svg)](https://github.com/cvsickle/bluefin-dx/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+This repository is a custom [bootc](https://github.com/bootc-dev/bootc) image, built on [Bluefin-DX](https://github.com/ublue-os/bluefin).
 
-After setup, it is recommended you update this README to describe your custom image.
+It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
+
+## Changes made
+
+### System packages added
+
+- Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
+  - [Neovim](https://github.com/neovim/neovim)
+  - [LazyGit](https://github.com/jesseduffield/lazygit)
+  - JetBrains Mono Nerd Font from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+  - Etc.
+- [Helium Browser](https://github.com/imputnet/helium)
+- Dependencies for [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) themes.
+- Swapped `tuned-ppd` for `power-profiles-daemon` for optimization on Framework 13 Pro. See the [Phoronix writeup](https://www.phoronix.com/review/fedora-pantherlake-thermald-tuned).
+
+### System packages removed
+
+- `gnome-tour`
+- `malcontent-control`
+
+### Brew
+
+- [Dev Container CLI](https://github.com/devcontainers/cli)
+- [LazyDocker](https://github.com/jesseduffield/lazydocker)
+
+### Flatpak
+
+- [Easy Effects](https://flathub.org/en/apps/com.github.wwmm.easyeffects)
+- [Gear Lever](https://flathub.org/en/apps/it.mijorus.gearlever)
+- [Web Apps](https://flathub.org/en/apps/net.codelogistics.webapps)
+- [SiriKali](https://flathub.org/en/apps/io.github.mhogomchungu.sirikali)
+
+### GNOME extensions added
+
+- Alphabetical App Grid
+- O-tiling
+
+### GNOME extensions removed
+
+- Apps Menu
+- Places Status Indicator
 
 ## Installation
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+THere is the recommened installation process.
 
-To rebase an existing atomic Fedora installation to the latest build:
+- Flash the Stable Bluefin ISO for Nvidia GPUS from [projectbluefin.io](https://projectbluefin.io/) onto a USB.
+- Boot from the USB and install Bluefin.
+- Boot into Bluefin and switch it to developer mode.
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/cvsickle/bluefin-dx:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cvsickle/bluefin-dx:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+```bash
+# Switch to developer mode.
+ujust devmode
+# Reboot when done.
+systemctl reboot
+```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+- Once in developer mode, switch to this image.
 
-## ISO
+```bash
+# Normal image
+sudo bootc switch ghcr.io/cvsickle/bluefin-dx:latest
+# Nvidia image
+sudo bootc switch ghcr.io/cvsickle/bluefin-dx-nvidia:latest
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+# Reboot when done.
+systemctl reboot
+```
+
+- Once booted into this image, enable signing verification.
+
+```bash
+# Normal image
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/cvsickle/bluefin-dx:latest
+# Nvidia image
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/cvsickle/bluefin-dx-nvidia:latest
+```
+
+- If the boot loader menu entries are still showing the upstream image name, force them to update.
+
+```bash
+sudo rpm-ostree kargs --append=bls.refresh=1
+systemctl reboot
+
+sudo rpm-ostree kargs --delete=bls.refresh=1
+systemctl reboot
+```
+
+## Recommended GTK Theming
+
+Want to make your apps look less gray? Check out the [theming instructions](./docs/themes.md).
 
 ## Verification
 
