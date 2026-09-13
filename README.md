@@ -52,9 +52,12 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 THere is the recommened installation process.
 
-- Flash the Stable Bluefin ISO for Nvidia GPUS from [projectbluefin.io](https://projectbluefin.io/) onto a USB.
+- Flash the Stable Bluefin ISO from [projectbluefin.io](https://projectbluefin.io/) onto a USB.
 - Boot from the USB and install Bluefin.
 - Boot into Bluefin and switch it to developer mode.
+
+> [!TIP]
+> This process should work from any Fedora-based bootc image.
 
 ```bash
 # Switch to developer mode.
