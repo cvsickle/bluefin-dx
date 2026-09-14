@@ -8,6 +8,8 @@ This repository is a custom [bootc](https://github.com/bootc-dev/bootc) image bu
 
 It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
+![Desktop](./docs/screenshots/desktop.png) &nbsp; ![Tiled Apps](./docs/screenshots/tiled.png)
+
 ## Changes made
 
 ### System packages added
