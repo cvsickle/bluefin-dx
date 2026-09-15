@@ -10,6 +10,8 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 ![Desktop](./docs/screenshots/desktop.png) &nbsp; ![Tiled Apps](./docs/screenshots/tiled.png)
 
+> Wallpaper from [orangci](https://github.com/orangci/walls-catppuccin-mocha).
+
 ## Changes made
 
 ### System packages added
