@@ -22,7 +22,6 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
   - JetBrains Mono Nerd Font from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
   - Etc.
 - [btop](https://github.com/aristocratos/btop)
-- [superfile](https://github.com/yorukot/superfile)
 - [vifm](https://github.com/vifm/vifm)
 - [Helium Browser](https://github.com/imputnet/helium)
 - Dependencies for [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) themes.
