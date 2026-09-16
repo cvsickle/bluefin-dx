@@ -17,10 +17,12 @@ modules:
         - ripgrep
         - fd-find
         - btop
+
         - sassc
         - sass
         - gtk-murrine-engine
         - breeze-cursor-theme
+
         - helium-bin
     replace:
       - from-repo: fedora
