@@ -120,3 +120,8 @@ cosign verify --key cosign.pub ghcr.io/cvsickle/bluefin-dx
 - GitHub - [https://github.com/cvsickle/bluefin-dx](https://github.com/cvsickle/bluefin-dx)
 - Codeberg - [https://codeberg.org/cvsickle/bluefin-dx](https://codeberg.org/cvsickle/bluefin-dx)
 - Forgejo (Mirror) - [https://git.cvsickle.com/cvsickle/bluefin-dx](https://git.cvsickle.com/cvsickle/bluefin-dx)
+
+## Other custom OS images
+
+- [Bazzite DX](https://github.com/cvsickle/bazzite-dx)
+- [Zirconium](https://github.com/cvsickle/zirconium)
