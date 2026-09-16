@@ -7,7 +7,6 @@ modules:
       copr:
         - dejan/lazygit
         - imput/helium
-        - pennbauman/ports
       nonfree: rpmfusion
       cleanup: true
     install:
@@ -18,11 +17,12 @@ modules:
         - ripgrep
         - fd-find
         - btop
-        - lf
+
         - sassc
         - sass
         - gtk-murrine-engine
         - breeze-cursor-theme
+
         - helium-bin
     replace:
       - from-repo: fedora
