@@ -17,7 +17,7 @@ modules:
         - ripgrep
         - fd-find
         - btop
-        - mc
+        - vifm
         - sassc
         - sass
         - gtk-murrine-engine
