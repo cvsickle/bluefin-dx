@@ -17,6 +17,8 @@ modules:
         - sass
         - gtk-murrine-engine
         - breeze-cursor-theme
+        # Applications
+        - arm-image-installer
     replace:
       - from-repo: fedora
         packages:
