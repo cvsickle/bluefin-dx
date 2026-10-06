@@ -16,17 +16,21 @@ It was created using the [BlueBuild Workshop](https://workshop.blue-build.org/).
 
 ### System packages added
 
-- Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
-  - [Neovim](https://github.com/neovim/neovim)
-  - [LazyGit](https://github.com/jesseduffield/lazygit)
-  - JetBrains Mono Nerd Font from [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
-  - Etc.
-- [btop](https://github.com/aristocratos/btop)
-- [Helium Browser](https://github.com/imputnet/helium)
+#### Usability
+
 - Dependencies for [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) themes.
   - See [docs/themes](./docs/themes.md).
 - Swapped `tuned-ppd` for `power-profiles-daemon`
   - See the [Phoronix writeup](https://www.phoronix.com/review/fedora-pantherlake-thermald-tuned) for info.
+
+#### Applications
+
+- Everything needed for [LazyVim](https://github.com/lazyvim/lazyvim)
+  - [Neovim](https://github.com/neovim/neovim)
+  - [LazyGit](https://github.com/jesseduffield/lazygit)
+  - Etc.
+- [btop](https://github.com/aristocratos/btop)
+- [Helium Browser](https://github.com/imputnet/helium)
 
 ### System packages removed
 
@@ -65,15 +69,15 @@ THere is the recommened installation process.
 - Boot from the USB and install Bluefin.
 - Boot into Bluefin and switch it to developer mode.
 
-> [!TIP]
-> This process should work from any Fedora-based bootc image.
-
 ```bash
 # Switch to developer mode.
 ujust devmode
 # Reboot when done.
 systemctl reboot
 ```
+
+> [!TIP]
+> This process should work from any Fedora-based bootc image.
 
 - Once in developer mode, switch to this image.
 
@@ -94,15 +98,15 @@ systemctl reboot
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/cvsickle/bluefin-dx:latest
 # Nvidia image
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/cvsickle/bluefin-dx-nvidia:latest
+
+# Reboot when done.
+systemctl reboot
 ```
 
-- If the boot loader menu entries are still showing the upstream image name, force them to update.
+- If the boot loader menu entries are still showing the upstream image name, force them to update. Unfortunately, this is only a one-time fix. I'm still researching why this happens sometimes.
 
 ```bash
 sudo rpm-ostree kargs --append=bls.refresh=1
-systemctl reboot
-
-sudo rpm-ostree kargs --delete=bls.refresh=1
 systemctl reboot
 ```
 
@@ -127,4 +131,5 @@ cosign verify --key cosign.pub ghcr.io/cvsickle/bluefin-dx
 ## Other custom OS images
 
 - [Bazzite DX](https://github.com/cvsickle/bazzite-dx)
+- [Entrypoint](https://github.com/cvsickle/entrypoint)
 - [Zirconium](https://github.com/cvsickle/zirconium)
